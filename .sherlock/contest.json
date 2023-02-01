@@ -5,7 +5,7 @@
   "judging_ends_at": "2100-01-17 15:00",
   "prize_pool": "50000",
   "lead_senior_auditor_fixed_pay": "20000",
-  "short_description": "Carapace protocol is a non-custodial automated market maker implemented on a blockchain. Our automated market maker (AMM) pools liquidity and makes it available to swap traders according to an algorithm such as our premium pricing formula that fluctuates with supply and demand and the exchange rate formula that keeps increasing with the interest accrual.",
+  "short_description": "Building DeFi's newest primitive - connecting buyers & sellers of credit default risk in crypto loans.",
   "sponsor": "Carpace",
   "github_team": "carpace",
   "lines_of_code": "~2157",
