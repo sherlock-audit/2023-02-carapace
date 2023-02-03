@@ -13,7 +13,7 @@ Following are links to the Carapace whitepaper and documentation:
 
 - Whitepaper: https://www.carapace.finance/WhitePaper
 - User Docs: https://www.carapace.finance/docs/
-- Carapace Protocol Overview: https://docs.google.com/document/d/1qK-Lf8rwnns55lHgicB5flwcoFrepbXL14AwWSaqhNw
+- Carapace Complementary Docs: https://docs.google.com/document/d/1qK-Lf8rwnns55lHgicB5flwcoFrepbXL14AwWSaqhNw
 - Carapace Smart Contracts Overview: https://docs.google.com/document/d/1RihHcf-jS45BorVufVm4aYdXdQ65CaOxtW6ljz8DCOs
 
 # Carapace Audit Commit
