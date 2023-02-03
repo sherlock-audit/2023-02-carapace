@@ -13,7 +13,18 @@ Following are links to the Carapace whitepaper and documentation:
 
 - Whitepaper: https://www.carapace.finance/WhitePaper
 - User Docs: https://www.carapace.finance/docs/
+- Carapace Protocol Overview: https://docs.google.com/document/d/1qK-Lf8rwnns55lHgicB5flwcoFrepbXL14AwWSaqhNw
 - Carapace Smart Contracts Overview: https://docs.google.com/document/d/1RihHcf-jS45BorVufVm4aYdXdQ65CaOxtW6ljz8DCOs
+
+# Carapace Audit Commit
+
+Commit [5acbdc4](https://github.com/carapace-finance/credit-default-swaps-contracts/commit/5acbdc42d771d5fea080c10582c9a95c29814de4) is the frozen commit for the audit.
+
+# Running Tests
+
+See [README-carapace.md](README-carapace.md#npm-scripts) for details on how to setup local development environment and run tests.
+<br>
+Test coverage report can be generated using `npm run cover` command.
 
 # On-chain context
 
@@ -28,13 +39,15 @@ ADMIN: Trusted
 EXTERNAL-ADMINS: n/a
 ```
 
----
+## Smart contract ownership
 
-In Carapace protocol, all contracts are owned by the protocol.
+In Carapace protocol, all contracts are deployed and owned by the protocol.
 There are no user controlled admins. From trust perspective, there are only 2 types of users:
 
-- Protocol owner
-- Users
+- Protocol Owner
+- End Users
+
+## Smart contracts with restricted functions
 
 Following contracts have restricted functions, which are only callable by certain contracts:
 
@@ -56,6 +69,8 @@ Following contracts have restricted functions, which are only callable by certai
   - `lockCapital`: only callable by `DefaultStateManager.sol`
 
     <br>
+
+## Smart contracts with owner controlled functions
 
 Following contracts have owner controlled functions:
 
@@ -89,6 +104,10 @@ Following contracts have owner controlled functions:
 - `ReferenceLendingPools.sol`
   - `addReferenceLendingPool`
 
+<br>
+
+## Operational/monitoring functions
+
 Following contract functions will be called daily for operational & monitoring purposes:
 
 - `ProtectionPool.accruePremiumAndExpireProtections`: This function is used to accrue premium and expire protections and will be called daily via a cron job or using OZ defender or similar service.
@@ -120,9 +139,9 @@ All contracts in `contracts` folder, excluding `test` folder.
 
 ./core/pool:
 
-- `ProtectionPool.sol : This is core contract of the protocol and upgradeable using UUPS pattern`
+- **ProtectionPool.sol : This is core contract of the protocol and upgradeable using UUPS pattern**
 - ReferenceLendingPools.sol : upgradeable using UUPS pattern
-- `SToken.sol : ERC-20 compliant implementation of the interest bearing token for the Carapace protocol`
+- **SToken.sol : ERC-20 compliant implementation of the interest bearing token for the Carapace protocol**
 
 ./external/goldfinch:
 

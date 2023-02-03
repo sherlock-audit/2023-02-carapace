@@ -1,0 +1,39 @@
+## node packages
+node_modules
+
+## git
+.gitattributes
+
+## credentials
+.env
+.env.local
+.env.production
+.env.development
+
+#Hardhat
+artifacts
+cache
+
+#coverage
+coverage
+coverage.json
+
+#OpenZeppelin
+.openzeppelin
+
+#typechain
+typechain-types
+
+# docgen
+docs
+
+#vscode config
+.vscode
+.DS_Store
+*.log
+
+# abi
+abi
+
+# bytecode
+bytecode
