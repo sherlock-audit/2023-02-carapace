@@ -39,9 +39,13 @@ We encourage you to declare environment variables in your `.bash_profile`(or .zp
 
 ```bash
 export ALCHEMY_API_KEY = <alchemy_api_key>
+export MNEMONIC_WORDS = <mnemonic_words>
+export WALLET_INITIAL_INDEX = "0"
 ```
 
-You can keep `ETHERSCAN_API_KEY` empty until you deploy to the mainnet.
+- We recommend obtaining your mnemonic words from MetaMask and storing in `MNEMONIC_WORDS` so that you can use the same account when you test a dapp. Each word should be divided by space.
+
+- You can keep `ETHERSCAN_API_KEY` empty until you deploy to the mainnet.
 
 You are ready to write code!
 

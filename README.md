@@ -18,7 +18,7 @@ Following are links to the Carapace whitepaper and documentation:
 
 # Carapace Audit Commit
 
-Commit [5acbdc4](https://github.com/carapace-finance/credit-default-swaps-contracts/commit/5acbdc42d771d5fea080c10582c9a95c29814de4) is the frozen commit for the audit.
+Commit [e69045a](https://github.com/carapace-finance/credit-default-swaps-contracts/commit/e69045a1a721c4a18e8911bfba9edb6bb55bf562) is the frozen commit for the audit.
 
 # Running Tests
 
