@@ -27,7 +27,6 @@
 
 ```bash
 $ git clone https://github.com/sherlock-audit/2023-02-carapace
-$ cd credit-default-swaps-contracts
 $ npm install
 ```
 
