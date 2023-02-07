@@ -26,7 +26,7 @@
 2. Clone this repo and npm install
 
 ```bash
-$ git clone https://github.com/carapace-finance/credit-default-swaps-contracts
+$ git clone https://github.com/sherlock-audit/2023-02-carapace
 $ cd credit-default-swaps-contracts
 $ npm install
 ```
