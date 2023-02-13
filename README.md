@@ -22,7 +22,7 @@ Commit [e69045a](https://github.com/carapace-finance/credit-default-swaps-contra
 
 # Running Tests
 
-See [README-carapace.md](README-carapace.md) for details on how to setup local development environment and run tests.
+Join the contest and see `README-carapace.md` for details on how to setup local development environment and run tests.
 <br>
 Test coverage report can be generated using `npm run cover` command.
 
