@@ -26,6 +26,65 @@ Join the contest and see `README-carapace.md` for details on how to setup local 
 <br>
 Test coverage report can be generated using `npm run cover` command.
 
+
+# Audit scope
+
+All contracts in `contracts` folder, excluding `test` folder.
+
+./:
+
+- UUPSUpgradeableBase.sol
+
+./adapters:
+
+- GoldfinchAdapter.sol : upgradeable using UUPS pattern
+
+./core:
+
+- ContractFactory.sol : upgradeable using UUPS pattern
+- DefaultStateManager.sol : upgradeable using UUPS pattern
+- PremiumCalculator.sol : upgradeable using UUPS pattern
+- ProtectionPoolCycleManager.sol : upgradeable using UUPS pattern
+
+./core/pool:
+
+- **ProtectionPool.sol : This is core contract of the protocol and upgradeable using UUPS pattern**
+- ReferenceLendingPools.sol : upgradeable using UUPS pattern
+- **SToken.sol : ERC-20 compliant implementation of the interest bearing token for the Carapace protocol**
+
+./external/goldfinch:
+
+- ConfigOptions.sol
+- ICreditLine.sol
+- IGoldfinchConfig.sol
+- IPoolTokens.sol
+- ISeniorPool.sol
+- ISeniorPoolStrategy.sol
+- ITranchedPool.sol
+- IV2CreditLine.sol
+
+./external/openzeppelin/ERC1967:
+
+- ERC1967Proxy.sol
+- Proxy.sol
+
+./interfaces:
+
+- IDefaultStateManager.sol
+- ILendingProtocolAdapter.sol
+- ILendingProtocolAdapterFactory.sol
+- IPremiumCalculator.sol
+- IProtectionPool.sol
+- IProtectionPoolCycleManager.sol
+- IReferenceLendingPools.sol
+
+./libraries:
+
+- AccruedPremiumCalculator.sol
+- Constants.sol
+- ProtectionPoolHelper.sol
+- RiskFactorCalculator.sol
+
 # On-chain context
 
 ```
@@ -117,63 +176,3 @@ Following contract functions will be called daily for operational & monitoring p
 - `DefaultStateManager.assessStates`: This function is used to assess the states of the protection pools and will be called daily via a cron job or using OZ defender or similar service.
 
 <br>
-
-# Audit scope
-
-All contracts in `contracts` folder, excluding `test` folder.
-
-./:
-
-- UUPSUpgradeableBase.sol
-
-./adapters:
-
-- GoldfinchAdapter.sol : upgradeable using UUPS pattern
-
-./core:
-
-- ContractFactory.sol : upgradeable using UUPS pattern
-- DefaultStateManager.sol : upgradeable using UUPS pattern
-- PremiumCalculator.sol : upgradeable using UUPS pattern
-- ProtectionPoolCycleManager.sol : upgradeable using UUPS pattern
-
-./core/pool:
-
-- **ProtectionPool.sol : This is core contract of the protocol and upgradeable using UUPS pattern**
-- ReferenceLendingPools.sol : upgradeable using UUPS pattern
-- **SToken.sol : ERC-20 compliant implementation of the interest bearing token for the Carapace protocol**
-
-./external/goldfinch:
-
-- ConfigOptions.sol
-- ICreditLine.sol
-- IGoldfinchConfig.sol
-- IPoolTokens.sol
-- ISeniorPool.sol
-- ISeniorPoolStrategy.sol
-- ITranchedPool.sol
-- IV2CreditLine.sol
-
-./external/openzeppelin/ERC1967:
-
-- ERC1967Proxy.sol
-- Proxy.sol
-
-./interfaces:
-
-- IDefaultStateManager.sol
-- ILendingProtocolAdapter.sol
-- ILendingProtocolAdapterFactory.sol
-- IPremiumCalculator.sol
-- IProtectionPool.sol
-- IProtectionPoolCycleManager.sol
-- IReferenceLendingPools.sol
-
-./libraries:
-
-- AccruedPremiumCalculator.sol
-- Constants.sol
-- ProtectionPoolHelper.sol
-- RiskFactorCalculator.sol
-
-  <br>
